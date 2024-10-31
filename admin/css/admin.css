@@ -1,0 +1,77 @@
+/**
+ * Layout
+ */
+ 
+.qnsd_wrapper {
+	overflow: hidden;
+}
+#qnsd_main {
+	float: left;
+	width: 66%;
+}
+#qnsd_footer {
+	float: right;
+	width: 33%;
+}
+#qnsd_main .qnsd_content {
+	margin: 2em 1em 1em 0;
+}
+#qnsd_footer .qnsd_content {
+	margin: 2em 0 1em 1em;
+}
+body.rtl #qnsd_main {
+	float: right;
+	width: 66%;
+}
+body.rtl #qnsd_footer {
+	float: left;
+	width: 33%;
+}
+body.rtl #qnsd_main .qnsd_content {
+	margin: 2em 0 1em 1em;
+}
+body.rtl #qnsd_footer .qnsd_content {
+	margin: 2em 1em 1em 0;
+}
+
+/* If auto-folding of the admin menu */
+@media only screen and (max-width: 900px) {
+	/* dissolve floating */
+	#qnsd_main,
+	#qnsd_footer,
+	#qnsd_main .qnsd_content,
+	#qnsd_footer .qnsd_content {
+		float: none;
+		width: auto;
+		margin: 0;
+	}
+}
+
+/**
+ * Elements
+ */
+
+/*.qnsd_content dl {
+	padding: 0 8px;
+}*/
+.qnsd_content dd {
+	overflow: hidden; /* correct height if inner flowing elements */
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+#qnsd_main .qnsd_content .regular-text {
+	width: 100%;
+}
+
+.qnsd_notice {
+	font-weight: bold;
+}
+.qnsd_success {
+	font-weight: bold;
+	color: DarkGreen;
+}
+.qnsd_error {
+	font-weight: bold;
+	color: DarkRed;
+}
